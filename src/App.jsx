@@ -54,14 +54,14 @@ function App() {
       </header>
 
       <main>
-        <div className='hero'>test</div>
+        <div className='hero'>Qualcuno mi ha obbligato a farlo</div>
         {/* sto ciclando l'array delle sezioni */}
         {sectionsArray.map((s, index) => (
-          <Section title={s.sectionTitle} classes={s.sectionClass} dBox={s.doubleBox} mBox={s.monoBox} index={index}/>
-        ))}
+          <Section anchor={menuList[index].url.replace(/^#/, "")} title={s.sectionTitle} classes={s.sectionClass} dBox={s.doubleBox} mBox={s.monoBox} index={index}/>
+        )
+        )}
       </main>
-      {/* <Hero title={pageTitle}/>
-       */}
+
        <footer>
 
        </footer>
@@ -89,9 +89,9 @@ function Navbar ({menu}) {
  * @param {MonoBox} mBox
  * @returns 
  */
-function Section({title, classes, dBox, mBox, index}) {
+function Section({anchor, title, classes, dBox, mBox, index}) {
   return (<>
-    <h2>{title}</h2>
+    <h2 id={anchor}>{title}</h2>
     {/* <section className={"section__wrapper section--"+(index+1)} key={index}> */}
     <section className={classes +" "+(index%2 !== 0 ? "orizinv" : "oriz")} key={index}>
       <DBoxElem title={dBox.title} buttonLabel={dBox.buttonLabel} underText={dBox.underText} />
@@ -135,7 +135,6 @@ function DBoxElem({title, buttonLabel, underText}) {
 
 
 /**
- * 
  * @param {*} title 
  * @param {*} text 
  * @returns 
@@ -146,7 +145,7 @@ function MBoxElem({title, text}) {
     return (
     <div className='mask'>
       <div className='monolayer'>
-        <h3>{title}</h3>
+        <h3 className='ciao'>{title}</h3>
         <p>{text}</p>
       </div>
     </div>
