@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#root {
+    width: 100%;
+}
+
+header{
+    min-width: 100%;
+}
+
+h3 {
+    padding: 15px;
+    margin: 0;
+}
+
+.frontlayer>h3{
+    color:white;
+    font-size: 32px;
+}
+
+.monolayer>h3{
+    color:blueviolet;
+    font-size: 30px;
+}
+
+p{
+    margin:0;
+    padding: 15px;
+}
+
+.backlayer>p{
+    font-size: 20px;
+}
+
+.monolayer>p{
+    font-size: 18px;
+}
+
+
+nav {
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+    background-color: rgba(175, 61, 228, 0.527);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+main{
+  max-width: 1200px;
+  display: flex; 
+  flex-direction: column;
+  margin: 24px auto 0;
+  
+}
+
+main>section{
+    margin-bottom: 25px;
+}
+
+main>section>div {
+    border: 1px solid black;
+    margin: 0 10px
+}
+
+.mask{
+    width: 50%;
+    height: 420px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.oriz{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.orizinv{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.frontlayer,
+.backlayer{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.frontlayer{
+    position: relative;
+    z-index: 2;
+
+    transition: all .4s linear;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	text-align: center;
+}
+
+.backlayer{
+    position: absolute;
+    inset: 0 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.monolayer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenitore1 .frontlayer{
+    background-image: url(https://www.focusjunior.it/content/uploads/2018/03/universo-1.jpg);
+    transition: background-position 0.8s ease;
+    
+}
+
+.contenitore2 .frontlayer{
+    background-image: url(https://starwalk.space/gallery/images/what-is-space/1140x641.jpg);
+    transition: background-position 0.8s ease;
+}
+
+.contenitore3 .frontlayer{
+    background-image: url(https://static.sevendaysweb.com/2077/2019/07/24/143607/spazio1-600.scale-to-max-width.825x.png);
+    transition: background-position 0.8s ease;
+}
+
+.contenitore1 .frontlayer:hover{
+     background-position: 50% -80px;
+}
+
+.contenitore2 .frontlayer:hover{
+    background-position: 50% -80px;
+}
+
+.contenitore3 .frontlayer:hover{
+    background-position: 50% -80px;
+}
+
+.contenitore1 .backlayer{
+    background-color: violet;
+}
+
+.contenitore2 .backlayer{
+    background-color: blue;
+    color:white
+}
+
+.contenitore3 .backlayer{
+    background-color: red;
+}
+
+button{
+    border-radius: 15px;
+    height: 32px;
+    width: 80px;
+
+    appearance: none;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: #ffff;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: rgba(175, 61, 228, 0.527);
+}
+
+footer{
+    background-color: rgb(16, 35, 97);
+    height: 420px;
+    width: 100%;
+}
