@@ -63,7 +63,7 @@ function App() {
       </main>
 
        <footer>
-
+          <p>Hey come va?</p>
        </footer>
     </>
   )
