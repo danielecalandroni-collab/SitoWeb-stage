@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       <header>
-        <img src="logo.png" alt="Logo" />
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/024/553/534/small/lion-head-logo-mascot-wildlife-animal-illustration-generative-ai-png.png" alt="Logo" />
           <Navbar menu={menuList}/>
       </header>
 
